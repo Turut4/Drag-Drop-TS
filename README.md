@@ -12,3 +12,13 @@ This project is a simple drag-and-drop interface built using TypeScript. It was 
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/your-repository-name.git
+
+2. Navigate to project directory:
+    ```bash
+    cd Drag-Drop-TS
+
+3. Compile to javascript
+    ```bash 
+    tsc
+
+4. Open index.html in your web browser to see the drag-and-drop in action.
