@@ -45,7 +45,37 @@ function autobind(
     };
     return adjDescriptior
 }
-//Project 
+//Project
+
+class ProjectList{
+    templateElement: HTMLTemplateElement;
+    hostElement: HTMLDivElement;
+    element: HTMLElement;
+    constructor(private type:'active'| 'finished'){
+        this.templateElement = document.getElementById('project-list')! as HTMLTemplateElement;
+        this.hostElement = document.getElementById('app')! as HTMLDivElement;
+
+        const importedNode = document.importNode(this.templateElement.content, true);
+        this.element = importedNode.firstElementChild as HTMLElement
+        this.element.id = `${this.type}-project`
+
+        
+        this.attach()
+        this.renderContent()
+    }
+
+    private renderContent(){
+        const listId = `${this.type}-project-list`
+        this.element.querySelector('ul')!.id = listId
+        this.element.querySelector('h2')!.textContent = this.type.toUpperCase() + ' Projects'
+    }
+    
+    private attach(){
+        this.hostElement.insertAdjacentElement('beforeend', this.element)
+    }
+}
+
+
 class ProjectInput{
     templateElement: HTMLTemplateElement;
     hostElement: HTMLDivElement;
@@ -95,9 +125,9 @@ class ProjectInput{
 
 
         if(
-            validate(titleValidatable)||
-            validate(descriptionValidatable) ||
-            validate(peopleValidatable)
+            !validate(titleValidatable)||
+            !validate(descriptionValidatable)||
+            !validate(peopleValidatable)
         ){
             alert('Invalid input, please try again!')
             return
@@ -132,3 +162,5 @@ class ProjectInput{
     }
 }
 const prjInput = new ProjectInput();
+const activePrjList = new ProjectList('active');
+const finishedPrjList = new ProjectList('finished');
