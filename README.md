@@ -17,8 +17,12 @@ This project is a simple drag-and-drop interface built using TypeScript. It was 
     ```bash
     cd Drag-Drop-TS
 
-3. Compile to javascript
+3. Install dependencies:
     ```bash 
-    tsc
+    npm install
 
-4. Open index.html in your web browser to see the drag-and-drop in action.
+4. Compile to javascript
+    ```bash 
+    npx webpack
+
+5. Open index.html in your web browser to see the drag-and-drop in action.
