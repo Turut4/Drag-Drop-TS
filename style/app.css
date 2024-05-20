@@ -40,7 +40,7 @@ textarea:focus {
 
 button {
   font: inherit;
-  background: #fc7eae;
+  background: #ffa4c7;
   border: 2px solid #faafcc;
   cursor: pointer;
   color: black;
@@ -57,12 +57,12 @@ button:hover,
 button:active {
   transition:.5s;
   background: transparent;
-  border-color: #a80041;
+  border-color: #ff9ec3;
 }
 
 .projects {
   margin: 1rem;
-  border: 1px solid #ff0062;
+  border: 1px solid #ff84b3;
 }
 
 .projects header {
@@ -73,12 +73,12 @@ button:active {
   align-items: center;
 }
 
-#finished-projects {
-  border-color: #0044ff;
+#Finished-projects {
+  border-color: #7b9eff;
 }
 
-#finished-projects header {
-  background: #0044ff;
+#Finished-projects header {
+  background: #7b9eff;
 }
 
 .projects h2 {
@@ -96,6 +96,7 @@ button:active {
   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.26);
   padding: 1rem;
   margin: 1rem;
+  background-color: white;
 }
 
 .projects li h2 {
@@ -103,7 +104,7 @@ button:active {
   margin: 0.5rem 0;
 }
 
-#finished-projects li h2 {
+#Finished-projects li h2 {
   color: #0044ff;
 }
 
@@ -120,7 +121,7 @@ button:active {
   background: #ffe3ee;
 }
 
-#finished-projects .droppable {
+#Finished-projects .droppable {
   background: #d6e1ff;
 }
 
