@@ -169,8 +169,8 @@ class ProjectItem extends Components<HTMLUListElement, HTMLLIElement> implements
         
     }
 
-    dragEndHandler(event: DragTarget): void {
-        console.log('dragend')
+    dragEndHandler(_: DragTarget): void {
+
     }
     configure() {
         this.element.addEventListener('dragstart', this.dragStartHandler)
@@ -212,7 +212,7 @@ class ProjectList extends Components<HTMLElement, HTMLDivElement> implements Dra
     }
 
     @autobind
-    dragLeaveHandler(event: DragEvent): void {
+    dragLeaveHandler(_: DragEvent): void {
         const listEl = this.element.querySelector('ul')!;
         listEl.classList.remove('droppable')
     }
